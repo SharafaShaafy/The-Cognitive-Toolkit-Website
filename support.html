@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding for consistent text display -->
+    <meta charset="UTF-8">
+
+    <!-- Page title includes page name for better usability -->
+    <title>The Cognitive Toolkit</title>
+
+    <!-- External CSS file used for layout and styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    <body>
+
+        <!----------------- HEADER ------------------>
+        <header>
+            <!-- Header contains the website title and navigation menu. Using <header> improves semantic meaning and accessibility.-->
+            <!-- Wrapper div allows logo and navigation to sit on one line using flexbox-->
+            <div class="header-container">
+                
+                <!-- Main website heading -->
+                <h1 class="logo">The Cognitive Toolkit</h1>
+
+                <!-- Navigation menu linking internal pages -->
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="planning.html" class="nav-link">Study Planning</a></li>
+                        <li><a href="focus.html" class="nav-link">Focus Techniques</a></li>
+                        <li><a href="productivity.html" class="nav-link">Productivity</a></li>
+                        
+                        <!-- <<strong> is used instead of <b> for semantic emphasis.It indicates the current active page (Support)-->
+                        <li><strong class="active-page">Support</strong></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        <!------------------- MAIN CONTENT ------------------->
+        <main>
+
+            <!-- FAQ SECTION using <details> and <summary> for accessibility -->
+            <section class="faq-section">
+                <h2>Common Questions</h2>
+                
+                <!-- <details> creates a box that can be expanded or collapsed by the user.
+                <summary> is the title or question that is always visible, and clicking it shows or hides the content inside <details>.
+                This is often used for FAQs to keep the page clean and easy to read. -->
+                <details>
+                    <summary>How do I start my first study plan?</summary>
+                    <p>Begin by listing your deadlines and breaking tasks into smaller chunks.</p>
+                </details>
+
+                <details>
+                    <summary>What focus techniques are best for exams?</summary>
+                    <p>The Pomodoro technique and Deep Work sessions are highly recommended.</p>
+                </details>
+
+                <details>
+                    <summary>How can I manage my time effectively with part-time work?</summary>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                </details>
+
+                <details>
+                    <summary>How do I contact support?</summary>
+                    <p>
+                        You can email us at
+                        <a href="mailto:support@cognitivetoolkit.edu">
+                            support@cognitivetoolkit.edu
+                        </a>.
+                    </p>
+                    <!-- mailto opens the user’s default email application -->
+                </details>
+            </section>
+
+            <hr>
+
+            <!-------------------CONTACT SECTION ------------------->
+            <section class="contact-area">
+                <h2>Get in Touch</h2>
+
+                <div class="contact-split"> <!-- Layout container splits page into two columns -->
+                    
+                    <!-- LEFT SIDE: information content -->
+                    <!-- div used for layout grouping. -->
+                    <!-- Contact details -->
+                    <div class="contact-left">
+                        <p>We are committed to responding to your enquiries.</p>
+                        <p><strong>Email:</strong> support@cognitivetoolkit.edu</p>
+                        <p><strong>Phone:</strong> +1 234 567 8910</p>
+                        <p><strong>Address:</strong> 123 Lorem Ipsum Street, ECU Campus</p>
+                    </div>
+
+                    <!-- RIGHT SIDE: interactive form -->
+                    <!-- Contact form -->
+                    <div class="contact-right">
+                        
+                        <!-- Form structure demonstrates understanding of user input -->
+                        <!-- form collects structured user input -->
+                        <!-- method="post" indicates data submission (even though no backend yet) -->
+                        <form action="#" method="post">
+                            
+                            <!-- Each row groups label along with input for alignment -->
+                            <div class="form-row">
+                                <label for="name">Name</label> <!-- label improves accessibility by linking to input id -->
+                                <input type="text" id="name" required>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+
+                            <div class="form-row">
+                                <label for="message">Message</label>
+                                <!-- textarea used for multi-line user input -->
+                                <textarea id="message" rows="5" required></textarea> 
+                            </div>
+                            
+                            <!-- submit button sends form data -->
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+
+        <!------------------- FOOTER ------------------->
+        
+        <!-- footer contains copyright / closing information -->
+        <footer>
+            <p><strong>&copy; 2026 The Cognitive Toolkit</strong></p>
+        </footer>
+
+    </body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta charset ensures correct character encoding.
+        UTF-8 allows the page to display text correctly across browsers. -->
+    <meta charset="UTF-8">
+
+    <!-- Page title shown in the browser tab.
+        The same site title is kept for consistency across pages-->
+    <title>The Cognitive Toolkit</title>
+
+    <!-- External CSS file controls all layout and styling.
+        This follows best practice by separating structure and design.-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    <body>
+
+        <!-------------------- HEADER SECTION START -------------------->
+        <header>
+            <!-- Header contains the website title and navigation menu. Using <header> improves semantic meaning and accessibility.-->
+            <div class="header-container">
+            <!-- Wrapper div allows logo and navigation to sit on one line using flexbox-->
+
+                <!-- Main website heading -->
+                <h1 class="logo">The Cognitive Toolkit</h1>
+
+                <!-------------------- NAVIGATION START -------------------->
+                <nav>
+                    <!-- <nav> groups the main menu links together.This allows users to move easily between pages.-->
+                    <ul>
+                        <!-- Links to other pages in the website -->
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="planning.html" class="nav-link">Study Planning</a></li>
+
+                    <!-- <strong> is used instead of <b> for semantic emphasis.
+                    It indicates the current active page (Focus).-->
+                        <li><strong class="active-page">Focus Techniques</strong></li>
+
+                        <li><a href="productivity.html" class="nav-link">Productivity</a></li>
+                        <li><a href="support.html" class="nav-link">Support</a></li>
+                    </ul>
+                </nav>
+                <!-------------------- NAVIGATION END -------------------->
+
+            </div>
+        </header>
+        <!-------------------- HEADER SECTION END -------------------->
+
+
+        <!-------------------- MAIN CONTENT START -------------------->
+        <main>
+            <!-- <main> holds the primary content of the page.This helps assistive technologies understand the layout.-->
+
+            <!-------------------- HERO SECTION START -------------------->
+            <section class="hero"> <!-- Text grouped so it can align next to image in CSS layout -->
+                
+                <!-- Hero section introduces the focus techniques topic. It combines text and imagery to capture user attention.-->
+                <div class="hero-text">  <!-- Text grouped so it can align next to image in CSS layout -->
+                    <h2>Mastering Your Focus</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                </div>
+
+                <div class="hero-media"> <!-- Separate container allows image resizing and positioning -->
+                    <!--  Image includes alt text for accessibility and screen readers.-->
+                    <img src="images/mastering%20your%20focus.png"
+                         alt="Mastering your focus"
+                         width="400"
+                         height="250">
+                </div>
+            </section>
+            <!-------------------- HERO SECTION END -------------------->
+
+
+            <!-------------------- FOCUS TOOLS CARDS START -------------------->
+            <section class="highlight-section">
+                <!-- Card layout is used to present focus techniques clearly.This improves readability and visual hierarchy.-->
+                <h2>Essential Focus Tools</h2>
+
+                <div class="card-grid">
+                    <!-- Each <article> represents one focus technique. article chosen because each technique is standalone information -->
+
+                    <!-- CARD 1 START -->
+                    <article>
+                        <img src="images/lo-fi%20music%20for%20concentration.png"
+                             alt="Music for concentration"
+                             width="120">
+                        <h3>Lo-Fi Music for Concentration</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                        <p><a href="#">Read More</a></p>
+                    </article>
+                    <!-- CARD 1 END-->
+
+                    <!-- CARD 2 START-->
+                    <article>
+                        <img src="images/pomodoro.png" alt="Pomodoro technique" width="120">
+                        <h3>Pomodoro</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                        <p><a href="#">Read More</a></p>
+                    </article>
+                    <!-- CARD 2 END-->
+
+                    <!-- CARD 3 START-->
+                    <article>
+                        <img src="images/deep%20work%20session.png"
+                             alt="Deep work session"
+                             width="120">
+                        <h3>Deep Work Session</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                        <p><a href="#">Read More</a></p>
+                    </article>
+                    <!-- CARD 3 END-->
+                </div>
+            </section>
+            <!-------------------- FOCUS TOOLS CARDS END -------------------->
+
+            <hr>
+
+            <!-------------------- YOUTUBE MEDIA SECTION START -------------------->
+            <section class="video-section">
+                <!-- <iframe> is used to embed external media content.-->
+                <iframe class="media-frame" width="560" height="315" src="https://www.youtube.com/embed/sdhmijg7oRY?si=xeGkdcnC4udDAhZG" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                <!--  External link is provided so users can open the video directly on YouTube if they prefer.-->
+                <p>
+                    Please click here to view the
+                    <a href="https://www.youtube.com/embed/sdhmijg7oRY?si=xeGkdcnC4udDAhZG">
+                        video on YouTube
+                    </a>
+                </p>
+            </section>
+            <!-------------------- YOUTUBE MEDIA SECTION END -------------------->
+
+            <hr>
+
+            <!-------------------- MINDFULNESS SECTION START -------------------->
+            <section class="list-section">
+                <h2>Mindfulness for Enhanced Concentration</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+
+                <div class="info-list"> <!-- Wrapper allows vertical alignment of icon along with text rows -->
+                    
+                    <!-- Each article explains a mindfulness technique -->
+                    <!-- ITEM 1 START -->
+                    <article class="info-row">
+                        <div class="info-icon"> <!-- Icon separated to control size and spacing -->
+                            <img src="images/breathing%20exercises.png" alt="Breathing exercises" width="80">
+                        </div>
+                        <div class="info-content">
+                            <!-- <b> is used for visual emphasis only.<strong> is reserved for semantic importance.-->
+                            <p><b>Breathing Exercises</b></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere</p>
+                        </div>
+                    </article>
+                    <!-- ITEM 1 END-->
+
+                    <!-- ITEM 2 START-->
+                    <article class="info-row">
+                        <div class="info-icon">
+                            <img src="images/guided%20meditation.png" alt="Guided meditation" width="80">
+                        </div>
+                        <div class="info-content">
+                            <p><b>Guided Meditation</b></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere</p>
+                        </div>
+                    </article>
+                    <!-- ITEM 2 END-->
+
+                    <!-- ITEM 3 START-->
+                    <article class="info-row">
+                        <div class="info-icon">
+                            <img src="images/mindful%20breaks.png"  alt="Mindful breaks" width="80">
+                        </div>
+                        <div class="info-content">
+                            <p><b>Mindful Breaks</b></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere</p>
+                        </div>
+                    </article>
+                    <!-- ITEM 3 END-->
+                </div>
+            </section>
+            <!-------------------- MINDFULNESS SECTION END -------------------->
+
+        </main>
+        <!-------------------- MAIN CONTENT END -------------------->
+
+
+        <!-------------------- FOOTER START -------------------->
+        <footer>
+            <!-- Footer contains copyright information -->
+            <p><strong>&copy; 2026 The Cognitive Toolkit</strong></p>
+        </footer>
+        <!-------------------- FOOTER END -------------------->
+
+    </body>
+</html>

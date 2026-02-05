@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+        Meta charset ensures correct character encoding.
+        UTF-8 allows text to display correctly across all browsers.
+    -->
+    <meta charset="UTF-8">
+
+    <!-- 
+        Page title shown in the browser tab.
+        Consistent naming is used across the website.
+    -->
+    <title>The Cognitive Toolkit</title>
+
+    <!-- 
+        External CSS keeps styling separate from content
+        This makes editing design easier and keeps HTML clean
+    -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    <body>
+
+        <!-------------------- HEADER SECTION START -------------------->
+        <header>
+            <!-- Header contains the website title and navigation menu. Using <header> improves semantic meaning and accessibility.-->
+            <!-- Wrapper div allows logo and navigation to sit on one line using flexbox-->
+            <div class="header-container">
+
+                 <!-- Main website heading -->
+                <h1 class="logo">The Cognitive Toolkit</h1>
+
+                <!-------------------- NAVIGATION START -------------------->
+                <nav>
+                    <!-- <nav> groups all internal navigation links.This allows users to move between pages easily.-->
+                    <ul>
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="planning.html" class="nav-link">Study Planning</a></li>
+                        <li><a href="focus.html" class="nav-link">Focus Techniques</a></li>
+
+                        <!-- <<strong> is used instead of <b> for semantic emphasis.It indicates the current active page (Productivity)-->
+                        <li><strong class="active-page">Productivity</strong></li>
+
+                        <li><a href="support.html" class="nav-link">Support</a></li>
+                    </ul>
+                </nav>
+                <!-------------------- NAVIGATION END -------------------->
+
+            </div>
+        </header>
+        <!-------------------- HEADER SECTION END -------------------->
+
+
+        <!-------------------- MAIN CONTENT START -------------------->
+        <main>
+            <!-- <main> contains the primary content of this page.This helps assistive technologies identify key content.-->
+
+            <!-------------------- HERO SECTION START -------------------->
+            <section class="hero">
+                <!-- Hero section introduces the productivity topic.Text and imagery are combined to engage the user.-->
+                
+                <div class="hero-text"> <!-- Text grouped separately so it can sit beside image using CSS layout -->
+                    <h2>Maximizing Your Academic Efficiency</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                </div>
+
+                <div class="hero-media"><!-- Separate container allows image resizing and positioning -->
+                    <!-- Image includes alt text for accessibility and screen readers.-->
+                    <img src="images/productivity%20intro%20page.png" alt="Productivity introduction image" width="400" height="250">
+                </div>
+            </section>
+            <!-------------------- HERO SECTION END -------------------->
+
+
+            <!-------------------- PRODUCTIVITY TOOLS CARDS START -------------------->
+            <section class="highlight-section">
+                <!-- Card layout presents productivity tools clearly.This improves scanning and visual organisation.-->
+                <h2>Essential Productivity Tools</h2>
+
+                <div class="card-grid">
+                    <!-- Each <article> represents a productivity tool -->
+
+                    <!-- CARD 1 -->
+                    <article>
+                        <img src="images/review%20and%20reflection.png"
+                             alt="Review and reflection"
+                             width="120">
+                        <h3>Review &amp; Reflection</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                        <p><a href="#">Read More</a></p>
+                    </article>
+
+                    <!-- CARD 2 -->
+                    <article>
+                        <img src="images/progress%20tracking.png"
+                             alt="Progress tracking"
+                             width="120">
+                        <h3>Progress Tracking</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                        <p><a href="#">Read More</a></p>
+                    </article>
+
+                    <!-- CARD 3 -->
+                    <article>
+                        <img src="images/create%20a%20to%20do%20list.png"
+                             alt="Create a to-do list"
+                             width="120">
+                        <h3>Create To-Do List</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                        <p><a href="#">Read More</a></p>
+                    </article>
+                </div>
+            </section>
+            <!-------------------- PRODUCTIVITY TOOLS CARDS END -------------------->
+
+            <hr>
+
+            <!-------------------- YOUTUBE MEDIA SECTION START -------------------->
+            <section class="video-section">
+                <!-- Embedded YouTube video demonstrates a media mashup.-->
+                <iframe class="media-frame" width="560" height="315" src="https://www.youtube.com/embed/hw2clzJWdV0?si=YyWOnFe0e_nv7lC6" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> </iframe>
+
+                <!-- External link provided for direct access on YouTube -->
+                <p>
+                    Please click here to view the
+                    <a href="https://www.youtube.com/embed/hw2clzJWdV0?si=YyWOnFe0e_nv7lC6">
+                        video on YouTube
+                    </a>
+                </p>
+            </section>
+            <!-------------------- YOUTUBE MEDIA SECTION END -------------------->
+
+            <hr>
+
+            <!-------------------- HABIT BUILDING SECTION START -------------------->
+            <section class="list-section">
+                <h2>Mastering Productive Habits</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+
+                <div class="info-list">  <!-- Wrapper allows vertical alignment of icon along with text rows -->
+                    
+                    <!-- Each article explains a habit-building concept -->
+                    <!-- ITEM 1 -->
+                    <article class="info-row">
+                        <div class="info-icon"> <!-- Icon separated to control size and spacing -->
+                            <img src="images/power%20of%20consistency.png" alt="Power of consistency" width="80">
+                        </div>
+                        <div class="info-content">
+                            <!-- <b> is used for visual emphasis only.<strong> is preferred for semantic importance.
+                            -->
+                            <p><b>Power of Consistency</b></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere</p>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 2 -->
+                    <article class="info-row">
+                        <div class="info-icon">
+                            <img src="images/creating%20an%20effective%20routine.png" alt="Creating an effective routine" width="80">
+                        </div>
+                        <div class="info-content">
+                            <p><b>Creating an Effective Routine</b></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere</p>
+                        </div>
+                    </article>
+
+                    <!-- ITEM 3 -->
+                    <article class="info-row">
+                        <div class="info-icon">
+                            <img src="images/role%20of%20environment.png" alt="Role of environment" width="80">
+                        </div>
+                        <div class="info-content">
+                            <p><b>Role of Environment</b></p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <!-------------------- HABIT BUILDING SECTION END -------------------->
+
+        </main>
+        <!-------------------- MAIN CONTENT END -------------------->
+
+
+        <!-------------------- FOOTER START -------------------->
+        <footer>
+            <!-- Footer contains copyright information -->
+            <p><strong>&copy; 2026 The Cognitive Toolkit</strong></p>
+        </footer>
+        <!-------------------- FOOTER END -------------------->
+
+    </body>
+</html>

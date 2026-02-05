@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta charset ensures correct character encoding. UTF-8 supports most characters and symbols across all browsers.-->
+    <meta charset="UTF-8">
+
+    <!-- The title appears on the browser tab and helps users identify the website easily. -->
+    <title>The Cognitive Toolkit</title>
+
+    <!--  External CSS file is linked here to separate content (HTML) from presentation (CSS), which improves readability and maintenance.-->
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+
+    <body>
+
+        <!-------------------- HEADER SECTION START -------------------->
+        <header>
+            <!-- Header contains the website title and main navigation.
+                <header> is a semantic element that improves accessibility and clearly defines the top section of the page. 
+                Div used only as a layout wrapper so CSS flexbox can align logo and menu.-->
+            <div class="header-container">
+
+                <!--  Main website heading.
+                    <h1> is used because this is the most important title on the page.-->
+                <h1 class="logo">The Cognitive Toolkit</h1>
+
+                <!-------------------- NAVIGATION START -------------------->
+                <nav>
+                    <!-- <nav> groups all main navigation links. This menu is always visible so users can move between pages easily without confusion.-->
+                    <ul>
+                        <!-- <strong> is used instead of <b> for semantic emphasis.
+                            It indicates the current active page (Home).-->
+                        <li><strong class="active-page">Home</strong></li>
+
+                        <!-- Navigation links to other pages of the website -->
+                        <li><a href="planning.html" class="nav-link">Study Planning</a></li>
+                        <li><a href="focus.html" class="nav-link">Focus Techniques</a></li>
+                        <li><a href="productivity.html" class="nav-link">Productivity</a></li>
+                        <li><a href="support.html" class="nav-link">Support</a></li>
+                    </ul>
+                </nav>
+                <!-------------------- NAVIGATION END -------------------->
+
+            </div>
+        </header>
+        <!-------------------- HEADER SECTION END -------------------->
+
+
+        <!-------------------- MAIN CONTENT START -------------------->
+        <main>
+            <!-- <main> holds the primary content of the page. This helps screen readers identify the main information.-->
+
+            <!-------------------- HERO SECTION START -------------------->
+            <section class="hero">
+                <!-- Hero section introduces the website purpose.
+                    It includes text and an image to quickly grab user attention.-->
+                <div class="hero-text">
+                <!--Div groups text together so it can be positioned beside the image using CSS-->
+                    
+                    
+                    <h2>Boost Your Study Skills!</h2>
+
+                    <!-- Placeholder text used for layout testing -->
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+
+                    <!-- Call to action button encourages user to continue exploring -->
+                    <p><a href="planning.html">Get Started</a></p>
+                </div>
+
+                <div class="hero-media">
+                    <!-- Image includes alt text for accessibility.
+                        This ensures screen readers can describe the image.
+                        Separate wrapper allows image sizing and alignment control-->
+                    <img src="images/home%20introduction.jpg" alt="Boost your study skills" width="400" height="250">
+                </div>
+            </section>
+            <!-------------------- HERO SECTION END -------------------->
+
+            <hr>
+
+            <!-------------------- LEARNING OBJECTIVES START -------------------->
+            <section>
+                <!--  This section explains what users will learn from the website. -->
+                <h2>What You'll Learn</h2>
+
+                <!-- Unordered list is used because the learning outcomes do not follow a strict sequence. -->
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipiscing elit.</li>
+                    <li>Amet consectetur adipiscing elit quisque faucibus ex sapien.</li>
+                    <li>Quisque faucibus ex sapien vitae pellentesque sem placerat.</li>
+                    <li>Vitae pellentesque sem placerat in id cursus mi.</li>
+                </ul>
+            </section>
+            <!-------------------- LEARNING OBJECTIVES END -------------------->
+
+            <hr>
+
+            <!-------------------- CONTENT CARDS START -------------------->
+            <section class="highlight-section">
+                <!--  Card style layout is used to make key topics easy to scan and visually appealing. -->
+                <h2>Explore Key Topics</h2>
+
+                <div class="card-grid">
+                    <!-- Each <article> represents a self-contained topic. This improves semantic structure and accessibility.-->
+
+                    <!-- CARD 1 START-->
+                    <article>
+                        <img src="images/study%20plan%20image.png" alt="Study plan" width="120">
+                        <h3>Study Planning Tips</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                        <p><a href="planning.html">Read More</a></p>
+                    </article>
+                    <!-- CARD 1 END -->
+
+                    <!-- CARD 2 START-->
+                    <article>
+                        <img src="images/focus%20image.png" alt="Focus techniques" width="120">
+                        <h3>Focus Techniques</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                        <p><a href="focus.html">Read More</a></p>
+                    </article>
+                    <!-- CARD 2 END -->
+
+                    <!-- CARD 3 START-->
+                    <article>
+                        <img src="images/productivity%20image.png" alt="Boosting productivity" width="120">
+                        <h3>Boosting Productivity</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                        <p><a href="productivity.html">Read More</a></p>
+                    </article>
+                    <!-- CARD 3 END -->
+                </div>
+            </section>
+            <!-------------------- CONTENT CARDS END -------------------->
+
+            <hr>
+
+            <!-------------------- TESTIMONIAL SECTION START -------------------->
+            <section class="testimonial-section">
+                <div class="testimonial-header">
+                    <h2>What Our Users Say</h2>
+                    <p>Real experiences from students who improved their studies.</p>
+                </div>
+
+                <div class="testimonial-container">
+                <!-- Wrapper used so cards can be aligned side-by-side in CSS-->
+                    
+                    
+                    <!-- TESTIMONIAL 1 START -->
+                    <article class="rect-card">
+                        <div class="student-img-wrapper"> <!-- Image wrapper used to control shape/size in CSS -->
+                            <img src="images/student%20testimonial%201.jpg"
+                                 alt="Student testimonial"
+                                 width="80">
+                        </div>
+                        <div class="student-info">
+                            <p><strong>Student Name</strong></p>
+
+                            <!-- <blockquote> is used because this text represents a quoted testimonial.-->
+                            <blockquote>Lorem ipsum dolor sit amet consectetur adipiscing elit.</blockquote>
+                        </div>
+                    </article>
+                    <!-- TESTIMONIAL 1 END-->
+
+                    <!-- TESTIMONIAL 2 START-->
+                    <article class="rect-card">
+                        <div class="student-img-wrapper">
+                            <img src="images/student%20testimonial%202.jpg" alt="Student testimonial" width="80">
+                        </div>
+                        <div class="student-info">
+                            <p><strong>Student Name</strong></p>
+                            <blockquote>Lorem ipsum dolor sit amet consectetur adipiscing elit.</blockquote>
+                        </div>
+                    </article>
+                    <!-- TESTIMONIAL 2 END-->
+                </div>
+            </section>
+            <!-------------------- TESTIMONIAL SECTION END -------------------->
+
+        </main>
+        <!-------------------- MAIN CONTENT END -------------------->
+
+
+        <!-------------------- FOOTER START -------------------->
+        <footer>
+            <!-- Footer contains copyright information. <footer> is semantic and appears at the bottom of the page.-->
+            <p><strong>&copy; 2026 The Cognitive Toolkit</strong></p>
+        </footer>
+        <!-------------------- FOOTER END -------------------->
+
+    </body>
+</html>
