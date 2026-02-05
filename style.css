@@ -1,0 +1,419 @@
+/*---------------------------------------------------------
+   1. GLOBAL RESET & BASE STYLES
+   ---------------------------------------------------------*/
+
+/* 
+  The * selector targets all elements on the page.
+  box-sizing: border-box ensures padding and border are included in element's total width/height.
+  This prevents layout issues and makes sizing easier.
+*/
+* {
+    box-sizing: border-box;
+}
+
+/* Base styles for the whole page */
+body {
+    margin: 0; /* Remove default browser margin */
+    font-family: 'Segoe UI', Arial, sans-serif; /* Clean, readable fonts */
+    line-height: 1.6; /* Space between lines for readability */
+    color: #333333; /* Dark gray text for good contrast */
+    background-color: #ffffff; /* White background for clarity */
+}
+
+/* Containers for main content and footer are centered and responsive */
+main, footer {
+    width: min(1100px, 92%); /* Max width 1100px, or 92% of screen width*/
+    margin: 0 auto; /* Center content horizontally */
+}
+
+/* Standardize headings for consistency */
+h2 {
+    font-size: 1.8rem;       /* Makes section titles stand out */
+    font-weight: 700;        /* Bold for emphasis */
+    margin-top: 0;           /* Remove default spacing above heading */
+    margin-bottom: 1rem;     /* Add space below heading */
+    color: #333333;          /* Dark gray for readability */
+}
+
+
+/*---------------------------------------------------------
+   2. ACCESSIBILITY
+ ---------------------------------------------------------*/
+
+/* Skip link allows users to jump straight to main content */
+.skip-link {
+    position: absolute;
+    left: -9999px; /* Hide off-screen by default */
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.75rem;
+}
+
+/* When focused, show skip link visibly at top-left */
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+}
+
+
+/*---------------------------------------------------------
+   3. HEADER and NAVIGATION 
+ ---------------------------------------------------------*/
+
+/* Main header container */
+header {
+    background-color: #ffffff;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0; /* Subtle separation from content */
+    width: 100%;
+}
+
+/* Header flex container for logo and navigation */
+.header-container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    display: flex;                  /* Place items in a row */
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center;            /* Vertically align items */
+}
+
+/* Site logo styling */
+.logo {
+    color: #000;
+    font-weight: 300;
+    font-size: 1.4rem;
+    letter-spacing: 1px; /* Slight spacing for minimalist look */
+    margin: 0;
+}
+
+/* Navigation list */
+nav ul {
+    list-style: none;  /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+    display: flex;     /* Horizontal menu */
+    gap: 18px;         /* Space between items */
+}
+
+/* Navigation links styling */
+.nav-link, .active-page {
+    color: #333;
+    text-decoration: none;      /* Remove underline */
+    font-size: 0.85rem;
+    font-weight: 400;
+    text-transform: uppercase; /* Makes menu uniform */
+    letter-spacing: 0.8px;
+}
+
+/* Hover effect for links */
+.nav-link:hover {
+    color: #16b698; /* Highlight when hovered */
+}
+
+/* Active page styling */
+.active-page {
+    font-weight: 600;
+    color: #000;
+    border-bottom: 1px solid #000; /* Visual indicator of active page */
+    padding-bottom: 2px;
+}
+
+
+/*---------------------------------------------------------
+   4. HERO SECTION (Intro Section)
+---------------------------------------------------------*/
+
+/* Hero section layout with text and image side by side */
+.hero {
+    display: flex;
+    align-items: center;       /* Vertically center text and image */
+    justify-content: space-between; /* Spread content apart */
+    gap: 40px;                 /* Space between text and media */
+    background-color: #dff3f1; /* Light teal for calm, focus feel */
+    padding: 60px 40px;        /* Space inside section */
+    border-radius: 12px;       /* Rounded corners*/
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/* Hero text container */
+.hero-text {
+    flex: 1; /* Take half width */
+}
+
+.hero-text h2 {
+    font-size: 2.2rem; /* Make hero title larger for impact */
+    color: #2c3e50;    /* Slightly darker for contrast */
+}
+
+.hero-media {
+    flex: 1; /* Image takes remaining space */
+}
+
+.hero-media img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* Subtle shadow for depth */
+}
+
+
+/*---------------------------------------------------------
+   5. CARD LAYOUT (Topics / Tools)
+---------------------------------------------------------*/
+
+/* Highlight section background */
+.highlight-section {
+    background-color: #dfedff; /* Light blue background */
+    padding: 2.5rem 40px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+/* Grid for multiple cards */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 equal columns */
+    gap: 1.5rem;                            /* Space between cards */
+    margin-top: 1.5rem;
+}
+
+/* Individual cards */
+.card-grid article {
+    background: #ffffff;
+    border: 1px solid #eaeaea; /* Subtle border */
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+/* Hover effect moves card slightly up */
+.card-grid article:hover {
+    transform: translateY(-5px);
+}
+
+/* Card images */
+.card-grid img {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    object-fit: cover; /* Keep image proportion */
+    margin-bottom: 15px;
+}
+
+
+/*---------------------------------------------------------
+   6. TESTIMONIAL SECTION
+  ---------------------------------------------------------*/
+
+.testimonial-section {
+    display: flex;
+    flex-direction: column;     /* Stack testimonials vertically */
+    gap: 20px;
+    padding: 2.5rem 40px;
+    background-color: #d6e2e5;  /* Light background for differentiation */
+    border-radius: 20px;
+    margin: 40px 0;
+}
+
+.testimonial-header p {
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+    color: #444;
+    font-weight: 500;
+}
+
+/* Container for multiple testimonial cards */
+.testimonial-container {
+    display: flex;
+    flex-direction: row; 
+    gap: 20px;
+}
+
+/* Individual testimonial card */
+.rect-card {
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    padding: 25px 25px 25px 35px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex: 1; /* Cards share equal width */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+/* Student image inside testimonial */
+.student-img-wrapper img {
+    width: 110px;
+    height: 140px;
+    object-fit: cover;  /* Crop image proportionally */
+    border-radius: 6px;
+}
+
+/* Quote styling inside testimonial */
+.student-content blockquote {
+    border-left: none;
+    margin: 5px 0 0;
+    padding: 0;
+    font-style: italic; /* Emphasize quote style */
+    color: #666;
+    font-size: 0.95rem;
+}
+
+
+/*---------------------------------------------------------
+   7. YouTube Videos
+ ---------------------------------------------------------*/
+
+.video-section {
+    display: flex;
+    flex-direction: column;    /* Stack video and link */
+    align-items: center;
+    margin: 2rem 0;
+}
+
+/* Responsive iframe */
+.media-frame {
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16/9;  /* Keep video proportions */
+    border: none;
+    border-radius: 8px;
+}
+
+
+/*---------------------------------------------------------
+   8. INFO LIST / STACKED ROWS 
+---------------------------------------------------------*/
+
+.list-section {
+    background-color: #f2f2f2;
+    border: 1px solid #e0e0e0;
+    padding: 1.75rem;
+    border-radius: 22px;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.info-row {
+    display: grid;
+    grid-template-columns: 200px 1fr; /* Image along with  content */
+    gap: 2rem;
+    align-items: start;
+    background-color: #ffffff;
+    border: 1px solid #d9e1ec;
+    border-radius: 16px;
+    padding: 1rem;
+}
+
+.info-icon img {
+    width: 200px; 
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #e6e6e6;
+}
+
+.info-content h3 {
+    margin: 0 0 0.35rem;
+    color: #2b4f81; /* Heading color */
+}
+
+
+/*---------------------------------------------------------
+   9. SUPPORT PAGE FORM & CONTACT INFO
+ ---------------------------------------------------------*/
+
+.faq-section {
+    margin-bottom: 50px;     /* Space below FAQ section */
+}
+
+.contact-area {
+    padding: 20px 0;
+}
+
+/* Two-column layout for contact info and form */
+.contact-split {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.contact-left {
+    flex: 1; /* Takes less space for info */
+    padding-top: 10px;
+}
+
+.contact-right {
+    flex: 1.5; /* Takes more space for the form */
+}
+
+/* Each form row spacing */
+.form-row {
+    margin-bottom: 1.2rem;
+}
+
+/* Form labels */
+label {
+    display: block;
+    font-weight: 300;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    color: #666;
+}
+
+/* Inputs and textarea styling */
+input[type="text"], 
+input[type="email"], 
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: inherit; /* Inherit main font for consistency */
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease; /* Smooth hover */
+}
+
+input[type="submit"]:hover {
+    background-color: #16a085; /* Darker teal on hover */
+}
+
+
+/*---------------------------------------------------------
+   10. FOOTER STYLING
+--------------------------------------------------------- */
+
+footer {
+    padding: 2rem 0;
+    color: #888;
+    text-align: center;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
